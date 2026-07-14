@@ -10,7 +10,7 @@ source code, dataset information, dependency list and execution instructions.
 
 | # | Experiment | Description | Link |
 |---|------------|-------------|------|
-| 1 | Single Layer Perceptron | Binary classification on the Banknote Authentication dataset using a perceptron implemented from scratch | [Lab-1-perceptron](./Lab-1-Perceptron) |
+| 1 | Single Layer Perceptron | Binary classification on the Banknote Authentication dataset using a perceptron implemented from scratch | [Lab-1-perceptron](./Lab%201%20Perceptron) |
 
 More experiments will be added here as the semester progresses.
 
