@@ -31,10 +31,12 @@ dataset.
   along with a comparison against Scikit-learn's built-in `Perceptron`.
 
 ## Repository Structure
+```text
 ├── README.md
 ├── requirements.txt
 ├── Lab1_perceptron.ipynb
 └── data_banknote_authentication.txt
+```
 
 ## Dependencies
 Listed in `requirements.txt`:
@@ -53,8 +55,8 @@ pip install -r requirements.txt
 ## Execution Instructions
 1. Clone this repository:
 ```bash
-   git clone https://github.com/<your-username>/<your-repo-name>.git
-   cd <your-repo-name>
+   git clone https://github.com/HumbleKishore/Deep-Learning-Lab.git
+   cd "Lab 1 Perceptron"
 ```
 2. Install dependencies:
 ```bash
