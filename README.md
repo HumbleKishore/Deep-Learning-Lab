@@ -25,11 +25,11 @@ deep-learning-lab/
 │   ├── Lab1_perceptron.ipynb
 │   └── data_banknote_authentication.txt
 ├── experiment-2-mlp/
-│ ├── README.md
-│ ├── requirements.txt
-│ └── Lab_2_MLP.ipynb
+│   ├── README.md
+│   ├── requirements.txt
+│   └── Lab_2_MLP.ipynb
 ├── experiment-3-.../
-│ └── ...
+│   └── ...
 ```
 
 ## General Notes
