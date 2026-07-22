@@ -11,6 +11,7 @@ source code, dataset information, dependency list and execution instructions.
 | # | Experiment | Description | Link |
 |---|------------|-------------|------|
 | 1 | Single Layer Perceptron | Binary classification on the Banknote Authentication dataset using a perceptron implemented from scratch | [Lab-1-perceptron](./Lab%201%20Perceptron) |
+| 2 | Multi-Layer Perceptron | Multi-class image classification on the Fashion-MNIST dataset using an MLP with automated hyperparameter optimization | [Lab-2-MLP](./Lab%202%20MLP) |
 
 More experiments will be added here as the semester progresses.
 
@@ -23,8 +24,12 @@ deep-learning-lab/
 │   ├── requirements.txt
 │   ├── Lab1_perceptron.ipynb
 │   └── data_banknote_authentication.txt
-├── experiment-2-.../
-│   └── ...
+├── experiment-2-mlp/
+│ ├── README.md
+│ ├── requirements.txt
+│ └── Lab_2_MLP.ipynb
+├── experiment-3-.../
+│ └── ...
 ```
 
 ## General Notes
