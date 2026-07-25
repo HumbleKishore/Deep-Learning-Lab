@@ -1,5 +1,4 @@
 # Experiment 1 – Single Layer Perceptron for Binary Classification
-
 CS3807 – Deep Learning Laboratory, Shiv Nadar University Chennai
 
 ## Objective
@@ -7,7 +6,9 @@ To understand the concept of an artificial neuron and implement a Single Layer
 Perceptron from scratch for binary classification. This includes understanding
 the perceptron learning algorithm, the role of the step activation function,
 visualizing the learning process, and evaluating the classifier on a real-world
-dataset.
+dataset. As an additional task, the perceptron learning rule was also applied
+to fundamental logic gates (OR, AND, NOT) to study convergence behaviour on
+small, linearly separable problems.
 
 ## Dataset
 - **Name:** Banknote Authentication Dataset
@@ -21,7 +22,13 @@ dataset.
   notebook while loading the data.
 - **Class distribution:** 762 authentic, 610 forged.
 
+For the additional task, no external dataset is used — the truth tables of the
+OR, AND, and NOT logic gates are defined directly in the notebook as small
+NumPy arrays.
+
 ## Method
+
+### Main Experiment: Banknote Classification
 - Features were standardized using `StandardScaler`.
 - Data was split into 1097 training samples and 275 testing samples (80/20 split).
 - A perceptron was implemented from scratch with a step activation function and
@@ -29,6 +36,15 @@ dataset.
   for 50 epochs with a learning rate of 0.01.
 - The effect of learning rate (0.001, 0.01, 0.1) on convergence was also studied,
   along with a comparison against Scikit-learn's built-in `Perceptron`.
+
+### Additional Task: Logic Gate Perceptrons
+- A separate, minimal perceptron (`train_perceptron()`) was implemented using
+  the same step activation function and weight update rule as above.
+- The OR, AND, and NOT gate truth tables were each trained with a learning rate
+  of 0.1 for up to 10 epochs, with early stopping once an epoch produced zero
+  misclassifications.
+- The decision boundary was plotted and saved after every individual weight
+  update, so its evolution could be traced step by step for each gate.
 
 ## Repository Structure
 ```text
@@ -63,15 +79,20 @@ pip install -r requirements.txt
    pip install -r requirements.txt
 ```
 3. Launch Jupyter and run the notebook top to bottom (the dataset file is already
-   in the same folder, so no separate download step is needed):
+   in the same folder, so no separate download step is needed). The notebook
+   covers the main banknote classification experiment first, followed by the
+   logic gate perceptrons as the additional task:
 ```bash
    jupyter notebook Lab1_perceptron.ipynb
 ```
 4. All plots are saved automatically as `.eps` files in the working directory
-   (via the `save_plot()` helper in the notebook) and the console will print
+   (via the `save_plot()` helper for the main experiment, and directly inside
+   `plot_decision_boundary()` for the logic gates) and the console will print
    per-epoch training logs, final weights/bias, and test set metrics.
 
 ## Results
+
+### Main Experiment: Banknote Classification
 Training misclassifications dropped sharply from 47 in epoch 1, then oscillated
 between roughly 13 and 21 for the remaining epochs without reaching zero,
 indicating the two classes are not perfectly linearly separable.
@@ -94,11 +115,33 @@ Scikit-learn's `Perceptron` trained on the same split gave an accuracy of 0.9891
 close to the from-scratch implementation's 0.9782, confirming the custom
 implementation behaves correctly.
 
+### Additional Task: Logic Gate Perceptrons
+All three gates were linearly separable and the perceptron converged to a
+zero-error solution well within the 10-epoch budget.
+
+| Gate | Epochs to Converge | Total Weight Updates | Final Weights | Final Bias |
+|------|--------------------|-----------------------|----------------|------------|
+| OR   | 4                  | 5                     | `[0.1, 0.1]`   | `-0.1`     |
+| AND  | 4                  | 8                     | `[0.2, 0.1]`   | `-0.2`     |
+| NOT  | 3                  | 2                     | `[-0.1]`       | `0.0`      |
+
+AND required more updates than OR since it needs to isolate a single positive
+example, `(1,1)`, out of four points, while OR only needs to isolate a single
+negative example, `(0,0)`. NOT converged fastest since it has only two possible
+input samples. Inference on all rows of each truth table after training matched
+the expected gate logic exactly in every case.
+
 ## Conclusion
-The perceptron learned a reasonably good linear decision boundary for this
-dataset, achieving over 97% test accuracy despite not fully converging during
-training. This shows the two classes are mostly, but not perfectly, linearly
-separable. The experiment also confirmed that learning rate has no effect on
-this perceptron's convergence pattern, and that the custom implementation
-matches a standard library implementation in performance, motivating the need
-for multilayer networks to handle non-linearly separable problems like XOR.
+The perceptron learned a reasonably good linear decision boundary for the
+banknote dataset, achieving over 97% test accuracy despite not fully converging
+during training. This shows the two classes are mostly, but not perfectly,
+linearly separable. The experiment also confirmed that learning rate has no
+effect on this perceptron's convergence pattern, and that the custom
+implementation matches a standard library implementation in performance.
+
+The additional logic gate task further confirmed that a single layer perceptron
+can perfectly learn any linearly separable function — OR, AND, and NOT were all
+learned exactly, with the decision boundary settling into place within a handful
+of updates. Together, both experiments motivate the need for multilayer networks
+to handle non-linearly separable problems like XOR, which a single perceptron
+cannot solve.
