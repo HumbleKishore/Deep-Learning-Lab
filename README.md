@@ -13,6 +13,7 @@ source code, dataset information, dependency list and execution instructions.
 | 1 | Single Layer Perceptron | Binary classification on the Banknote Authentication dataset using a perceptron implemented from scratch | [Lab-1-perceptron](./Lab%201%20Perceptron) |
 | 2 | Multi-Layer Perceptron | Multi-class image classification on the Fashion-MNIST dataset using an MLP with automated hyperparameter optimization | [Lab-2-MLP](./Lab%202%20MLP) |
 | 3 | CNN | understand the working principle of Convolutional Neural Networks by implementing convolution, pooling, feature map visualization, and image classification using TensorFlow/Keras. | [Lab-3-MLP](./Lab%203%20CNN) |
+| 3 | Transfer Learning | The objective of this experiment are Study the evolution of deep CNN architectures, Compare LeNet-5, AlexNet, VGG16, GoogleNet and ResNet,Understand transfer learning,Fine tune pretrained CNN models,Compare classification performance of different architectures | [Lab-4-Transfer-Learning](./Lab%204%20Transfer-learning) |
 
 More experiments will be added here as the semester progresses.
 
@@ -29,10 +30,14 @@ deep-learning-lab/
 │   ├── README.md
 │   ├── requirements.txt
 │   └── Lab_2_MLP.ipynb
-├── experiment-3-.../
+├── experiment-3-CNN/
 │   ├── README.md
 │   ├── requirements.txt
 │   └── Lab3.ipynb
+├── experiment-4-Transfer-Learning/
+│   ├── README.md
+│   ├── requirements.txt
+│   └── Lab_4.ipynb
 ```
 
 ## General Notes
