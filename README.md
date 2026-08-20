@@ -12,8 +12,7 @@ source code, dataset information, dependency list and execution instructions.
 |---|------------|-------------|------|
 | 1 | Single Layer Perceptron | Binary classification on the Banknote Authentication dataset using a perceptron implemented from scratch | [Lab-1-perceptron](./Lab%201%20Perceptron) |
 | 2 | Multi-Layer Perceptron | Multi-class image classification on the Fashion-MNIST dataset using an MLP with automated hyperparameter optimization | [Lab-2-MLP](./Lab%202%20MLP) |
-| 3 | CNN | understand the working principle of Convolutional Neural Networks by implementing convolu
-tion, pooling, feature map visualization, and image classification using TensorFlow/Keras. | [Lab-3-MLP](./Lab%203%20CNN) |
+| 3 | CNN | understand the working principle of Convolutional Neural Networks by implementing convolution, pooling, feature map visualization, and image classification using TensorFlow/Keras. | [Lab-3-MLP](./Lab%203%20CNN) |
 
 More experiments will be added here as the semester progresses.
 
