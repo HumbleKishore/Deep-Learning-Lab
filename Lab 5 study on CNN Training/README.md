@@ -79,7 +79,7 @@ using 5-fold cross-validation.
 ```text
 ├── README.md
 ├── requirements.txt
-├── Lab_5_CNN_Comprehensive_Study.ipynb
+├── Lab_5.ipynb
 ```
 
 ## Dependencies
@@ -112,7 +112,7 @@ pip install -r requirements.txt
    dataset is downloaded automatically via `tensorflow_datasets`, no
    separate dataset download needed):
 ```bash
-   jupyter notebook Lab_5_CNN_Comprehensive_Study.ipynb
+   jupyter notebook Lab_5.ipynb
 ```
 4. All plots are saved automatically as `.eps` files in the working
    directory (via the `save_plot()` helper in the notebook), and the
