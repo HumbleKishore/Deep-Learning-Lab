@@ -14,7 +14,6 @@ source code, dataset information, dependency list and execution instructions.
 | 2 | Multi-Layer Perceptron | Multi-class image classification on the Fashion-MNIST dataset using an MLP with automated hyperparameter optimization | [Lab-2-MLP](./Lab%202%20MLP) |
 | 3 | CNN | understand the working principle of Convolutional Neural Networks by implementing convolution, pooling, feature map visualization, and image classification using TensorFlow/Keras. | [Lab-3-MLP](./Lab%203%20CNN) |
 | 4 | Transfer Learning | The objective of this experiment are Study the evolution of deep CNN architectures, Compare LeNet-5, AlexNet, VGG16, GoogleNet and ResNet,Understand transfer learning,Fine tune pretrained CNN models,Compare classification performance of different architectures | [Lab-4-Transfer-Learning](Lab%204%20Transfer%20learning) |
-
 | 5 | Transfer Learning | The objective of this experiment are Study the evolution of deep CNN architectures, Compare LeNet-5, AlexNet, VGG16, GoogleNet and ResNet,Understand transfer learning,Fine tune pretrained CNN models,Compare classification performance of different architectures | [Lab-4-Transfer-Learning](Lab%204%20Transfer%20learning) |
 | 6 | Transfer Learning | The objective of this experiment are Study the evolution of deep CNN architectures, Compare LeNet-5, AlexNet, VGG16, GoogleNet and ResNet,Understand transfer learning,Fine tune pretrained CNN models,Compare classification performance of different architectures | [Lab-4-Transfer-Learning](Lab%204%20Transfer%20learning) |
 | 7 | Transfer Learning | The objective of this experiment are Study the evolution of deep CNN architectures, Compare LeNet-5, AlexNet, VGG16, GoogleNet and ResNet,Understand transfer learning,Fine tune pretrained CNN models,Compare classification performance of different architectures | [Lab-4-Transfer-Learning](Lab%204%20Transfer%20learning) |
@@ -42,11 +41,11 @@ deep-learning-lab/
 │   ├── README.md
 │   ├── requirements.txt
 │   └── Lab_4.ipynb
-├── experiment-5-Transfer-Learning/
+├── experiment-5-study-on-CNN-Training/
 │   ├── README.md
 │   ├── requirements.txt
 │   └── Lab_5.ipynb
-├── experiment-6-Transfer-Learning/
+├── experiment-6-RNN,LSTM-and-GRU/
 │   ├── README.md
 │   ├── requirements.txt
 │   └── Lab_6.ipynb
